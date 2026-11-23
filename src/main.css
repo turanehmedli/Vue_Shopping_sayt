@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.show-scrollbar {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+.show-scrollbar::-webkit-scrollbar {
+  display: block;
+  height: 6px;
+}
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+}
+
+.no-scrollbar {
+  overflow: auto;
+  scrollbar-width: none;          /* all modern browsers */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                  /* older Chrome and Safari */
+}
